@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+	<script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+	<div class="container" id="vue-app">
+		<div class="card">	
+			<div class="card-body text-center">
+				<img v-bind:src='src'>
+				<div class="progress">
+					<div class="progress-bar" v-bind:style='width'></div>	
+				</div>
+				<br>
+				<button v-on:click='punch' class="btn btn-danger">punch</button>
+				<button v-on:click='restart' class="btn btn-danger">restart</button>	
+			</div>
+		</div>
+	</div>
+</body>
+<script src="app.js"></script>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue.js</title>
+	<!-- 引入Vue - CDN -->
+	<script src="https://unpkg.com/vue"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<!-- DOM标签的容器 -->
+	<div id="vue-app">
+		<h1>Events事件</h1>
+
+		<!-- 点击事件 -->
+		<!-- 事件修饰符 once -->
+		<button v-on:click.once="addAge(1)">加一岁</button>
+		<button v-on:click="subtractAge(1)">减一岁</button>
+		<button v-on:dblclick="addAge(10)">加十岁</button>
+		<button v-on:dblclick="subtractAge(10)">减十岁</button>
+		<p>我的年龄是: {{age}}</p>
+
+		<!-- 鼠标事件 -->
+		<div id="canvas" @mousemove="moveXY">
+			{{x}} , {{y}}
+			
+			<!-- 事件修饰符 stop -->
+			<!-- <span v-on:mousemove.stop="stopPropagation">阻止冒泡事件</span> -->
+			<span v-on:mousemove.stop="">阻止冒泡事件</span>
+
+		</div>
+
+		<!-- 事件修饰符 once -->
+		<!-- 事件修饰符 prevent -->
+		<a v-on:click.prevent="alert" href="http://www.thenewstep.com">thenewstep</a>
+
+		<!-- 键盘事件 -->
+		<label>姓名:</label>
+		<input type="text" v-on:keyup.enter='logName'>
+		<label>年龄:</label>
+		<input type="text" v-on:keyup.alt.enter='logAge'>
+
+	</div>
+	
+	<script src="app.js"></script>
+</body>
+</html>

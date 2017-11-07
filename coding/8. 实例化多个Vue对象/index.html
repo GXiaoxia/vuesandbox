@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue.js</title>
+	<!-- 引入Vue - CDN -->
+	<script src="https://unpkg.com/vue"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="vue-app-one">
+		<p>{{title}}</p>
+		<h3>{{greet}}</h3>
+	</div>
+
+	<div id="vue-app-two">
+		<p>{{title}}</p>
+		<h3>{{greet}}</h3>
+	
+		<!-- 点击按钮改变app-one内容 -->
+		<button v-on:click='change'>click</button>
+	</div>
+</body>
+<script src="app.js"></script>
+</html>

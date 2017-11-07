@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue.js</title>
+	<!-- 引入Vue - CDN -->
+	<script src="https://unpkg.com/vue"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<!-- DOM标签的容器 -->
+	<div id="vue-app">
+		<h1>双向数据绑定</h1>
+
+		<label>姓名:</label>
+		<!-- 方法1: -->
+		<!-- <input ref='name' type="text" v-bind:value='name' v-on:keyup='logName'> -->
+		<!-- 方法2:(常用) -->
+		<input type="text" v-model="name">
+	
+		<span>{{name}}</span>
+
+		<label>年龄:</label>
+		<!-- <input ref="age" type="text" v-on:keyup='logAge' v-bind:value='age'> -->
+		<input type="text" v-model="age1">
+
+		<span>{{age1}}</span>
+
+	</div>
+	
+	<script src="app.js"></script>
+</body>
+</html>
